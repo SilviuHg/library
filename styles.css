@@ -1,0 +1,187 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6;
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  padding-left: 15px;
+}
+
+.header {
+  padding-left: 25px;
+  margin-bottom: 1px;
+  display: block;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: #fff;
+}
+
+.main-content {
+  height: 100%;
+  padding: 5px;
+  background-color: #f3f4f6;
+}
+
+.user-input {
+  position: fixed;
+  width: 250px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #d1d5db;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -125px;
+  background-color: #f3f4f6;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+label {
+  margin-bottom: 5px;
+  float: left;
+  font-weight: 500;
+}
+
+input {
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  padding: 5px 0px 5px 5px;
+}
+
+.is-read {
+  display: flex;
+  gap: 3px;
+}
+
+.btn-1 {
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #f3f4f6;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.btn-2 {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border-radius: 50%;
+  border: 1px solid #d1d5db;
+}
+
+.btn-3 {
+  margin-top: 5px;
+  padding: 5px 0px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4ade80;
+  font-weight: 500;
+}
+
+.library-display {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 15px 0px;
+}
+
+.grid-div {
+  justify-self: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 5px;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#formElement {
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0px 20px 0px;
+}
+
+.remove-book,
+.read-status {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0px;
+}
+
+.remove-book {
+  background-color: #f3f4f6;
+}
+
+button,
+input {
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+input[type="checkbox"] {
+  width: 1em;
+  height: 1em;
+  border-radius: 0.15em;
+  accent-color: #fff;
+}
+
+input[type="text"],
+input[type="number"] {
+  cursor: text;
+}
+
+button:hover {
+  filter: brightness(90%);
+  transition: filter 0.15s ease-in-out;
+}
+
+.btn-red {
+  background-color: #f87171;
+}
+
+.btn-green {
+  background-color: #4ade80;
+}
