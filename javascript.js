@@ -6,28 +6,59 @@ const form = document.getElementById("formElement");
 
 let myLibrary = [];
 
-function Book(title, author, pages, read) {
-  // the constructor...
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-  this.info = function () {
+//function Book(title, author, pages, read) {
+// the constructor...
+//  this.title = title;
+//  this.author = author;
+//  this.pages = pages;
+//  this.read = read;
+//  this.info = function () {
+//    return (
+//      title + " " + "by" + " " + author + "," + " " + pages + " " + "pages"
+//    );
+//  };
+// }
+
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+  info() {
     return (
-      title + " " + "by" + " " + author + "," + " " + pages + " " + "pages"
+      this.title +
+      " " +
+      "by" +
+      " " +
+      this.author +
+      "," +
+      " " +
+      this.pages +
+      " " +
+      "pages"
     );
-  };
+  }
+  readStatus() {
+    if (this.read == false) {
+      this.read = true;
+    } else {
+      this.read = false;
+    }
+    renderDisplay();
+  }
 }
 
-Book.prototype.readStatus = function () {
-  if (this.read == false) {
-    this.read = true;
-  } else {
-    this.read = false;
-  }
+//Book.prototype.readStatus = function () {
+//  if (this.read == false) {
+//    this.read = true;
+//  } else {
+//    this.read = false;
+//  }
 
-  renderDisplay();
-};
+//  renderDisplay();
+// };
 
 function renderDisplay() {
   // remove previous divs
@@ -94,7 +125,7 @@ function addBookToLibrary(event) {
   const myBook = new Book(bookTitle, bookAuthor, bookPages, bookStatus);
 
   myLibrary.push(myBook);
-
+  console.log(myLibrary);
   renderDisplay();
 
   // stop the form from submitting to the server
