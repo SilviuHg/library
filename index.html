@@ -24,16 +24,16 @@
           <form action="" method="" class="user-input" id="formElement">
             <button class="btn-2" type="button">x</button>
             <label for="book-title">Book Title</label>
-            <input id="book-title" name="book-title" type="text" />
+            <input id="book-title" name="book-title" type="text" required />
             <label for="book-author">Book Author</label>
-            <input id="book-author" name="book-author" type="text" />
+            <input id="book-author" name="book-author" type="text" required />
             <label for="pages">Number of pages</label>
-            <input id="pages" name="pages" type="text" />
+            <input id="pages" name="pages" type="number" required />
             <div class="is-read">
               <label for="book-status">Did you read the book?</label>
               <input id="book-status" type="checkbox" />
             </div>
-            <button class="btn-3">Submit</button>
+            <button class="btn-3" type="submit">Submit</button>
           </form>
         </div>
         <div class="library-display"></div>

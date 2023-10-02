@@ -185,3 +185,19 @@ button:hover {
 .btn-green {
   background-color: #4ade80;
 }
+
+input:invalid {
+  box-shadow: 0 0 3px 1px red;
+}
+
+input:focus:invalid {
+  box-shadow: none;
+}
+
+input:valid {
+  box-shadow: 0 0 3px 1px green;
+}
+
+#book-status {
+  box-shadow: none;
+}

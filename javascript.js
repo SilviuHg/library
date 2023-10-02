@@ -122,11 +122,20 @@ function addBookToLibrary(event) {
     bookStatus = true;
   }
 
+  // Check if any of the required fields are empty
+  if (!bookTitle || !bookAuthor || !bookPages) {
+    alert("Please fill in all required fields.");
+    return; // Do not proceed with adding the book
+  }
+
   const myBook = new Book(bookTitle, bookAuthor, bookPages, bookStatus);
 
   myLibrary.push(myBook);
   console.log(myLibrary);
   renderDisplay();
+
+  // Reset the form
+  form.reset();
 
   // stop the form from submitting to the server
   event.preventDefault();
